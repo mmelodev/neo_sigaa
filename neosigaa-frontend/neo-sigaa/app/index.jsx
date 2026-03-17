@@ -1,28 +1,38 @@
-import { useRef, useState } from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { BarraDeNavegacao } from "../components/barraDeNavegacao";
+import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
+import { BarraDeNavegacao } from "../components/barraDeNavegacao"
 
 export default function Index() {
       //adicionar constantes
 
       return (
-         <View style={styles.container}>
-            <View style={styles.content}>
-                  <Text>Olá Mundo</Text>
-            </View>
+            <ImageBackground 
+                  style={styles.container} 
+                  source={require('../assets/images/background_home.png')} resizeMode="cover"
+            >
+                  <View style={styles.content}>
+                      <Image source={require('../assets/images/working_lol.png')}/>  
+                  </View>
 
-            <BarraDeNavegacao/>
-            
-         </View>   
+                  <BarraDeNavegacao />
+
+            </ImageBackground>
       )
 }
 
 const styles = StyleSheet.create({
       container: {
-            flex: 1
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center'
       },
-
+      
       content: {
-            flex: 1
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center'
       }
 })
