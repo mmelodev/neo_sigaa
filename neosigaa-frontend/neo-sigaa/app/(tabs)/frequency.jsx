@@ -1,16 +1,16 @@
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
-import { BarraDeNavegacao } from "../components/barraDeNavegacao"
+import { BarraDeNavegacao } from "../../components/barraDeNavegacao"
 
-export default function Index() {
+export default function frequency() {
       //adicionar constantes
 
       return (
             <ImageBackground 
                   style={styles.container} 
-                  source={require('../assets/images/background_home.png')} resizeMode="cover"
+                  source={require('../../assets/images/wallpaper3.jpg')} resizeMode="cover"
             >
                   <View style={styles.content}>
-                      <Image source={require('../assets/images/working_lol.png')}/>  
+                      
                   </View>
 
             </ImageBackground>
