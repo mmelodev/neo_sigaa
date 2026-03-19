@@ -1,21 +1,23 @@
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
-import { BarraDeNavegacao } from "../../components/barraDeNavegacao"
+import { HeaderHome } from '../../components/HeaderHome.jsx'
 
-export default function user() {
+const Home = () => {
       //adicionar constantes
 
       return (
             <ImageBackground 
                   style={styles.container} 
-                  source={require('../../assets/images/wallpaper1.jpg')} resizeMode="cover"
+                  source={require('../../assets/images/background_home.png')} resizeMode="cover"
             >
                   <View style={styles.content}>
-
+                      <HeaderHome/>
                   </View>
 
             </ImageBackground>
       )
 }
+
+export default Home
 
 const styles = StyleSheet.create({
       container: {

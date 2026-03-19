@@ -1,5 +1,4 @@
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
-import { BarraDeNavegacao } from "../../components/barraDeNavegacao"
 
 export default function settings() {
       //adicionar constantes
@@ -7,7 +6,7 @@ export default function settings() {
       return (
             <ImageBackground 
                   style={styles.container} 
-                  source={require('../../assets/images/wallpaper6.jpg')} resizeMode="cover"
+                  source={require('../../assets/images/background_home.png')} resizeMode="cover"
             >
                   <View style={styles.content}>
                        

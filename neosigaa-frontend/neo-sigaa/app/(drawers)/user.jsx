@@ -1,15 +1,15 @@
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
 
-export default function grades() {
+export default function user() {
       //adicionar constantes
 
       return (
             <ImageBackground 
                   style={styles.container} 
-                  source={require('../../assets/images/background_home.png')} resizeMode="cover"
+                  source={require('../../assets/images/wallpaper1.jpg')} resizeMode="cover"
             >
                   <View style={styles.content}>
-                      
+
                   </View>
 
             </ImageBackground>

@@ -1,5 +1,4 @@
 import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
-import { BarraDeNavegacao } from "../../components/barraDeNavegacao"
 
 export default function classmates() {
       //adicionar constantes
@@ -7,7 +6,7 @@ export default function classmates() {
       return (
             <ImageBackground 
                   style={styles.container} 
-                  source={require('../../assets/images/wallpaper5.jpg')} resizeMode="cover"
+                  source={require('../../assets/images/background_home.png')} resizeMode="cover"
             >
                   <View style={styles.content}> 
                   </View>
