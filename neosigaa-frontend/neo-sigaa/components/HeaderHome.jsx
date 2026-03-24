@@ -43,8 +43,7 @@ const styles = StyleSheet.create({
             alignItems: 'center',
             justifyContent: 'space-between',
             width: 300,
-            transform: [{ translateY: -300 }],
-
+            transform: [{ translateY: 100 }],
       },
 
       containerActionsHeader: {
