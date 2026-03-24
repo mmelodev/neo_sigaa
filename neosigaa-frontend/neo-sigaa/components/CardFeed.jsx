@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import Animated, { useAnimatedStyle, withTiming } from "react-native-reanimated";
 
 
@@ -9,9 +9,9 @@ const CardFeed = React.memo(({ viewableItems, item }) => {
 
             const items = viewableItems.value || []
 
-            const isVisible = items.some ((vItem) => vItem.isViewable && vItem.item.id === item.id)
-            const isText = items.some ((vItem) => vItem.isViewable && vItem.item.title === item.title) //não tenho certeza se é asssim
-                  
+            const isVisible = items.some((vItem) => vItem.isViewable && vItem.item.id === item.id)
+            const isText = items.some((vItem) => vItem.isViewable && vItem.item.title === item.title) //não tenho certeza se é assim
+
 
             return {
                   transform: [{
@@ -32,10 +32,19 @@ const styles = StyleSheet.create({
             width: 340,
             height: 220,
             padding: 20,
-            backgroundColor: '#FFF',
+            backgroundColor: "rgba(255, 255, 255, 0.3)",
             margin: 20,
             borderRadius: 30,
+            overflow: 'hidden', 
+            borderWidth: 2,
+            borderColor: "rgba(255, 255, 255, 0.3)",
+            shadowColor: '#000',
+            shadowOffset: { width: 0, height: 10 },
+            shadowRadius: 10,
+            shadowOpacity: 0.1
+
       }
 })
 
-export { CardFeed } 
+export { CardFeed };
+

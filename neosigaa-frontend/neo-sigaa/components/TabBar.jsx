@@ -92,24 +92,6 @@ export function TabBar({ state, descriptors, navigation }) {
             routeName={route.name}
             label={label}
           />
-
-          /*<PlatformPressable
-            key={route.key}
-            href={buildHref(route.name, route.params)}
-            accessibilityState={isFocused ? { selected: true } : {}}
-            accessibilityLabel={options.tabBarAccessibilityLabel}
-            testID={options.tabBarButtonTestID}
-            onPress={onPress}
-            onLongPress={onLongPress}
-            style={styles.tabBarItem}
-          >
-            {icon [route.name]({
-              color: isFocused ? colors.primary : colors.text
-            })}
-            <Text style={{ color: isFocused ? colors.primary : colors.text }}>
-              {label}
-            </Text>
-          </PlatformPressable>*/
         );
       })}
     </View>
@@ -137,12 +119,5 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 0.1
   },
-
-  /*tabBarItem: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 5
-  }*/
 
 })
