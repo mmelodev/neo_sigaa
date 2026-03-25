@@ -30,7 +30,6 @@ export const HeaderHome = ({ props }) => {
                                     <Image source={require('../assets/images/example_profile_pic.png')} />
                               </Link>
                         </Pressable>
-
                   </View>
             </View>
       )

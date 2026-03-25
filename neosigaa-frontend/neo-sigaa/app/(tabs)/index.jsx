@@ -1,8 +1,7 @@
-import { FlatList, ImageBackground, StyleSheet, View } from "react-native";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import { useSharedValue } from "react-native-reanimated";
-import { CardFeed } from '../../components/CardFeed.jsx';
-import { HeaderHome } from '../../components/HeaderHome.jsx';
 import Feed from "../../components/Feed.jsx";
+import { HeaderHome } from '../../components/HeaderHome.jsx';
 
 const Home = () => {
 
@@ -15,9 +14,9 @@ const Home = () => {
             >
                   <View style={styles.content}>
                         <HeaderHome />
+                        <Feed/>
                   </View>
 
-                  <Feed/>
             </ImageBackground>
       )
 }
