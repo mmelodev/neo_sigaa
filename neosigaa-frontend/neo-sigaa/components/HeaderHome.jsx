@@ -41,8 +41,10 @@ const styles = StyleSheet.create({
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-between',
-            width: 300,
-            transform: [{ translateY: 100 }],
+            width: '100%',
+            paddingHorizontal: 40,
+            paddingTop: 70,
+            marginBottom: 0
       },
 
       containerActionsHeader: {

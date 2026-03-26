@@ -1,16 +1,20 @@
-import { Feather } from "@expo/vector-icons";
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import React, { useState } from "react";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import Animated, { useAnimatedStyle, withTiming } from "react-native-reanimated";
+import { LikeButton } from "./LikeButton";
 
 
 const CardFeed = React.memo(({ viewableItems, item }) => {
 
+      const [isLiked, setIsLiked] = useState(item.isLiked ?? false);
+      const [likeCount, setLikeCount] = useState(item.likes ?? 0);
+
+      //animação no scroll
       const rStyle = useAnimatedStyle(() => {
             const items = viewableItems.value || []
 
             const isVisible = items.some((vItem) => vItem.isViewable && vItem.item.id === item.id)
-            const isText = items.some((vItem) => vItem.isViewable && vItem.item.title === item.title) //não tenho certeza se é assim
 
             return {
                   transform: [{
@@ -18,6 +22,11 @@ const CardFeed = React.memo(({ viewableItems, item }) => {
                   }]
             }
       }, [])
+
+      const handleLikeChange = (newLikedState) => {
+            setIsLiked(newLikedState);
+            setLikeCount(prev => newLikedState ? prev + 1 : prev - 1);
+      };
 
       return (
             <Animated.View style={[styles.cardFeed, rStyle]}>
@@ -35,8 +44,15 @@ const CardFeed = React.memo(({ viewableItems, item }) => {
                         </View>
 
                         <View style={styles.cardFeedIconsBox}>
-                              <Feather name="heart" size={24} color={'#FFF'} />
-                              <Feather name="message-square" size={24} color={'#FFF'} />
+
+                              <LikeButton isLiked={isLiked}
+                                    likeCount={likeCount}
+                                    onLikeChange={handleLikeChange}
+                              />
+
+                              <Pressable>
+                                    <MaterialCommunityIcons name="comment-text-outline" size={24} color="#FFF" />
+                              </Pressable>
                         </View>
                   </View>
             </Animated.View>
@@ -46,11 +62,10 @@ const CardFeed = React.memo(({ viewableItems, item }) => {
 
 const styles = StyleSheet.create({
       cardFeed: {
-            width: 340,
+            width: 320,
             height: 220,
             padding: 20,
             backgroundColor: "rgba(255, 255, 255, 0.3)",
-            margin: 20,
             borderRadius: 30,
             overflow: 'hidden',
             borderWidth: 2,
@@ -58,7 +73,8 @@ const styles = StyleSheet.create({
             shadowColor: '#000',
             shadowOffset: { width: 0, height: 10 },
             shadowRadius: 10,
-            shadowOpacity: 0.1
+            shadowOpacity: 0.1,
+            marginTop: 20
       },
       cardFeedContainer: {
             display: 'flex',
@@ -66,7 +82,7 @@ const styles = StyleSheet.create({
             alignItems: 'flex-start',
             justifyContent: 'space-between',
             height: '100%',
-            width: '100%'
+            width: '100%',
       },
       cardFeedIconsBox: {
             display: 'flex',

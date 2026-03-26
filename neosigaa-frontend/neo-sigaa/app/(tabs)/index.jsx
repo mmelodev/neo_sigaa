@@ -25,13 +25,10 @@ export default Home
 
 const styles = StyleSheet.create({
       container: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-
+            flex: 1,
       },
       content: {
+            flex: 1,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',

@@ -4,7 +4,7 @@ export const CardClass = ({ style }) => {
       return (
             <View style={[styles.containerCardClass, style]}>
                   <Text>
-
+                        Olá Mundo! 
                   </Text>
             </View>
       )
@@ -12,11 +12,8 @@ export const CardClass = ({ style }) => {
 
 const styles = StyleSheet.create({
       containerCardClass: {
-            flex: 1,           
-            width: '100%',     
-            minHeight: 30,
+            width: '100%',
             backgroundColor: '#FFF',
             borderRadius: 8,
-            padding: 16,
       }
 })

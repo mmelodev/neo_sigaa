@@ -2,9 +2,9 @@ import { PlatformPressable } from "@react-navigation/elements";
 import { useEffect } from "react";
 import { StyleSheet } from "react-native";
 import Animated, { interpolate, useAnimatedStyle, useSharedValue, withSpring } from "react-native-reanimated";
-import { Icon } from "../constants/Icon";
+import { Icon } from "../constants/IconTabBar";
 
-export const TabBarButton = ({ onPress, onLongPress, isFocused, routeName, colors, label }) => {
+export const TabBarButton = ({ onPress, onLongPress, isFocused, routeName, label }) => {
 
       const scale = useSharedValue(0);
 
