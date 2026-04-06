@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: neo-sigaa
-playwright:
-  headless: false  # True em prod; false para debug
-sigaa:
-  base-url: <https://sigaa.ufra.edu.br>
-  sso-url: <https://autenticacao.ufra.edu.br/sso-server/login>
